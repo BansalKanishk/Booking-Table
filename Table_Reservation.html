@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Reservation</title>
+  </head>
+  <body>
+    <h1>Table Reservation</h1>
+    <div class="box">
+      <form method="POST" onsubmit="SubmitForm()">
+        <div>
+          <label>First name</label><br/><br/>
+          <input
+            type="text"
+            name="username"
+            placeholder="username"
+            required
+            minlength="4"
+            maxlength="150"
+          />
+        </div><br/>
+        <div>
+          <label>Last Name</label><br/><br/>
+          <input
+            type="text"
+            name="lastname"
+            placeholder="lastname"
+            minlength="3"
+            maxlength="150"
+          />
+        </div><br/>
+        <div>
+          <label>Contact number</label><br/><br/>
+          <input type="tel" name="number" placeholder="number" />
+        </div>
+
+        <div><br/>
+          <label for="Number_of_persons">Number of Persons</label><br/><br/>
+          <input type="number" id="Number_of_persons" name="Number_of_persons" />
+        </div>
+
+        <div><br/>
+          <label for="booking_date">Booking Date</label><br/><br/>
+          <input type="date" id="booking_date" name="booking_date" />
+        </div>
+
+          <label><br/>
+            <input type="checkbox" id="agree" name="agree" required />
+            I agree to the policy
+          </label><br/>
+        </div>
+        <div><br/>
+          <button onclick="Submit()">Submit</button><br/>
+        </div>
+      </form>
+    </div>
+  </body>
+  <style>
+    body{
+        text-align: center;
+        background-color: red;
+    }
+    h1{
+        background-color: white;    
+    }
+    label{
+        color: blue;
+        font-size: 20px;
+    }
+    label:hover{
+        color: black;
+        background-color: rgb(0, 255, 34);
+    }
+    .box{
+        border: 2px solid black;
+        padding: 20px;
+        background-color: pink;
+    }
+  </style>
+  <script>
+ //   function SubmitForm(){
+ //       alert("Form is Submited");
+ //       console.log("Form is Submited");
+ //   }
+    function Submit(){
+        alert("The Table is booked successfully");
+    }
+    
+  </script>
+</html>
